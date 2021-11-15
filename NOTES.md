@@ -54,3 +54,6 @@ The domain classes are implemented at this point and all the 26 JUnit tests pass
 Back to jBehave and first test (deposit) implementation. Some technical issues related to jBehave incompatibility with
 Java 17, see HOWTO for more on this.
 Given that the Account deposit() method requires an Amount and a Date, converters shall be used.
+
+- ### Withdrawal
+Implementation similar to the Deposit. Refactor the Step classes to inherit from a same parent in order to share code.
