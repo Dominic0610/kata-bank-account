@@ -92,6 +92,13 @@ public class AmountTest {
             assertNotEquals(fortyTwo, negativeFortyTwo);
         }
 
+        @Test public void equals_should_not_take_scale_into_consideration() {
+            Amount fortyTwo = Amount.of(42);
+            Amount anotherFortyTwo = Amount.of(new BigDecimal("42.00"));
+
+            assertThat(fortyTwo, is(equalTo(anotherFortyTwo)));
+        }
+
         @Test
         public void
         adding_two_amounts_should_return_the_correct_sum() {

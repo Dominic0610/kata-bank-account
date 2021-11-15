@@ -101,4 +101,25 @@ public class Amount {
     public String moneyFormat() {
         return DECIMAL_FORMAT.format(value);
     }
+
+    /**
+     * Don't let Lombok generate this one. We do not want to consider the <b>scale</b> when comparing Amounts.
+     * Example: with Lombok implementation using the classical equals for BigDecimal, the following instances
+     * won't be equal: Amount.of(new BigDecimal("42")) and Amount.of(new BigDecimal("42.00")).
+     * <p>
+     * <p/>
+     * Of course, if we don't offer the {@link #of(BigDecimal)} factory method we can perfectly live with Lombok code.
+     *
+     * @param o an instance to compare to
+     * @return true if o is equals to this, false otherwise
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Amount amount = (Amount) o;
+        // Do not use equals here!
+        return value.compareTo(amount.value) == 0;
+    }
+
 }
