@@ -29,3 +29,10 @@ https://en-academic.com/dic.nsf/enwiki/658767.
 - ###Operation
 It wraps an Amount and a Date and knows how to display itself nicely. As we need to test the output, a mock is necessary
 and so we add Mockito dependency.
+
+- ###LedgerLine
+An Account - not created yet - should be able to display its own operation history. An object 'AccountHistory' will keep
+track of this. Let's call it 'Ledger'.
+
+Every account movement is tracked in a list of the Ledger. This is the LedgerLine object, composed by an Operation and
+a current balance amount.
