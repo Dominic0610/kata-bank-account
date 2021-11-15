@@ -25,3 +25,7 @@ What about 1 Galleon = 17 Sickles = 493 Knuts in Harry Potter?\
 The good news is that this special case is rare in real-world:
 only Mauritania and Madagascar still have non-decimal currencies -
 https://en-academic.com/dic.nsf/enwiki/658767.
+
+- ###Operation
+It wraps an Amount and a Date and knows how to display itself nicely. As we need to test the output, a mock is necessary
+and so we add Mockito dependency.
