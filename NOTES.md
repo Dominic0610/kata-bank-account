@@ -1,4 +1,7 @@
 # NOTES: Quick thoughts about the kata implementation
+
+NB: Every point mentioned below is accompanied by at least one Git commit/push.
+
 ## Which dependencies ?
 There are 3 user stories in the kata. We clearly need a BDD testing framework:
 - jbehave https://jbehave.org/
@@ -45,3 +48,9 @@ Finally, here's the Account class, composed of a balance and a Ledger. It knows 
 how to display the operation history.
 
 The domain classes are implemented at this point and all the 26 JUnit tests pass. Type `mvn test` to see results.
+
+# jBehave - acceptance tests
+- ### Deposit
+Back to jBehave and first test (deposit) implementation. Some technical issues related to jBehave incompatibility with
+Java 17, see HOWTO for more on this.
+Given that the Account deposit() method requires an Amount and a Date, converters shall be used.
