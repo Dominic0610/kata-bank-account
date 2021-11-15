@@ -77,3 +77,19 @@ DEPOSIT    | 15/11/2021 23:42:00 |          200.50 |          401.00
 DEPOSIT    | 14/11/2021 23:42:00 |          200.50 |          200.50
 ```
 
+## Service API ?
+Well, the Account class is nearly this. But we can do better: a service should live in its own tier and expose a
+nice interface. The class
+- #### BankAccountService
+does just this. It has the following methods:
+- deposit
+- withdrawal
+- printAccountHistory with no arguments to print to System.out
+- printAccountHistory with a PrintStream parameter to print to that stream
+
+BankAccountService also use doubles for the amounts, even if they are stored as BigDecimal in the Account class (and all
+operations are performed on BigDecimal, without any rounding, except the print history). There's no reason to have a
+greater precision for a deposit/withdrawal API.
+
+A client implementation (yes, it was *not* required; but it's minimalistic, and it was useful to interactively test the app)
+is provided. See the HOWTO.md file for instructions.
