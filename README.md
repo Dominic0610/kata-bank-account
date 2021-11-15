@@ -23,5 +23,9 @@ As a bank client\
 I want to see the history (operation, date, amount, balance) of my operations
 
 ## Implementation discussion. How to run this kata.
-Please refer to __NOTES.md__ for implementation discussion\
-Please refer to __HOWTO.md__ for instructions
+Checkout this project with:
+```
+git clone https://github.com/Dominic0610/kata-bank-account.git
+```
+Please refer to __NOTES.md__ for implementation discussion.\
+Please refer to __HOWTO.md__ for instructions.
