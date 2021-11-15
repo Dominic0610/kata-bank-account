@@ -18,7 +18,7 @@ import java.text.DecimalFormat;
 @Value
 public class Amount {
 
-    private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("#.00");
+    private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("##0.00");
 
     /**
      * The amount value.

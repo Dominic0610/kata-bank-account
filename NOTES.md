@@ -36,3 +36,6 @@ track of this. Let's call it 'Ledger'.
 
 Every account movement is tracked in a list of the Ledger. This is the LedgerLine object, composed by an Operation and
 a current balance amount.
+
+- ###Ledger
+Already mentioned above. Just a list of LedgerLine knowing how to print a header and its operations.
