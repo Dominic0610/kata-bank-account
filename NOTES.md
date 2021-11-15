@@ -39,3 +39,9 @@ a current balance amount.
 
 - ###Ledger
 Already mentioned above. Just a list of LedgerLine knowing how to print a header and its operations.
+
+- ###Account
+Finally, here's the Account class, composed of a balance and a Ledger. It knows how to perform operations as deposit and withdrawal. It knows
+how to display the operation history.
+
+The domain classes are implemented at this point and all the 26 JUnit tests pass. Type `mvn test` to see results.
